@@ -1,0 +1,11 @@
+--- a/src/apk_defines.h
++++ b/src/apk_defines.h
+@@ -93,6 +93,8 @@
+ #define APK_DEFAULT_ARCH	"armhf"
+ #elif defined(__arm__) && __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
+ #define APK_DEFAULT_ARCH	"armel"
++#elif defined(__s390x__)
++#define APK_DEFAULT_ARCH	"s390x"
+ #else
+ #warning APK_DEFAULT_ARCH is not set for this architecture
+ #define APK_DEFAULT_ARCH        "noarch"
