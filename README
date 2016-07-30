@@ -1,6 +1,12 @@
-Bringing Alpine Linux to IBM s390x machines ( Z series )
+THERE IS NO NEED TO USE THIS REPO. PLEASE SEE  
+https://github.com/tmh1999/alpine-bootstrap-s390x
 
-This scripts requires a cross-compiler targeting s390x (gcc coupling with musl) which can be built using https://github.com/tmh1999/musl-cross
+************************************************************
+
+This script attemps to bootstrap Alpine Linux on s390x using a cross-compiler 
+(gcc coupled with musl) targeting s390x which can be built by using 
+https://github.com/tmh1999/musl-cross. Make sure you have it before using this 
+script.
 
 The required cross-compiler directory tree should look like this:
 # s390x-linux-musl/
@@ -22,11 +28,14 @@ The required cross-compiler directory tree should look like this:
 #	include/
 #	...
 
-To run this script:
+To run:
 
 ./build.sh /path/to/s390x-linux-musl s390x-linux-musl
-
 
 Successfully built:
 - Alpine's apk-tools
 - Busybox
+- OpenSSL
+- zlib
+- libfetch
+- apk-tools
